@@ -1,0 +1,162 @@
+$background: #E0EEEE;
+$header-color: #666666;
+
+html, body {
+  background: $background;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.title {
+  font-size: 25;
+  margin-top: 24px;
+}
+
+.container{
+  font-size: 20px;
+  zoom: 1;
+}
+
+.container:before,
+.container:after {
+    content: "";
+    display: flex;
+} 
+
+.container:after {
+    clear: both;
+}
+
+.wrapper {
+  width: 100%;
+  height: 100vh;
+}
+
+.content-wrapper {
+  display: flex;
+  height: 93vh;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+  padding: 0 2em;
+}
+.container_l {
+  position:relative;
+  border-width:2px;
+  width: 250px;
+  height: 100px;
+  float: left;
+  margin-top: 80px;
+}
+
+.container_r{
+  position: relative;
+  border-width:2px;
+  width: 350px;
+  height: 100px;
+  left:0px;
+  float: right;
+  margin-top: 80px;
+}
+.card  {
+  width: 1000px;
+  height: 500px;
+  display: flex;
+  justify-content: center;
+  background: #A52A2A;
+  box-shadow: 2px 3px 23px rgba(0,0,0,.1);
+  transform-style: preserve-3d;
+  color: #F1F1F1;
+  text-transform: uppercase;
+}
+
+.card_counter {
+  position: absolute;
+  left: 5%;
+  top: 1%;
+}
+
+.header {
+  background: #A52A2A;
+  box-shadow: 7px 7px 22px lightgray;
+  padding: 1em 0em;
+  position: relative;
+  color: #F1F1F1
+}
+
+.header-content {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  font-weight: 400;
+  text-align: center;
+
+  span {
+    font-size: 1.3em;
+    cursor: pointer
+  }
+}
+
+.card_actions {
+  position: absolute;
+  bottom: 10%;
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  opacity: 0;
+  transition: 0.3s;
+  left: 0;
+  
+  &.active {
+    opacity: 1;
+  }
+}
+
+.card_next-button {
+  margin-left: 0.5em;
+  cursor: pointer;
+  padding: 0.5em 0.75em;
+  background: $background;
+  color: #444;
+  transition: 0.2s;
+  
+  &:hover {
+    background: #A52A2A;
+    color: #F1F1F1
+  }
+}
+
+.card_prev-button {
+  margin-right: 0.5em;
+  cursor: pointer;
+  padding: 0.5em 0.75em;
+  background: $background;
+  color: #444;
+  transition: 0.2s;
+  
+  &:hover {
+    background: #A52A2A;
+    color: #F1F1F1
+  }
+}
+
+.header_card{
+  align-self: flex-start;
+  width: 100%;
+  margin-inline-start: 10px;
+  margin-block-start: 10px;
+  display: block;
+}
+
+.card_content--front {
+  animation: fadeInUp 0.5s;
+  line-height: 1.5;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.card_content--back {
+  animation: fadeIn 0.6s;
+  line-height: 1.5;
+  font-size: 14px;
+  font-weight: bold;
+}
